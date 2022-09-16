@@ -1,0 +1,68 @@
+<div class='modal-film__img-block'>
+  <img
+    class='film-img'
+    src='{{#if poster_path}}https://image.tmdb.org/t/p/w500/{{poster_path}}{{^}}./images/film.svg{{/if}}'
+     onerror="this.onerror=null;this.src='https://image.tmdb.org/t/p/w500/uc4RAVW1T3T29h6OQdr7zu4Blui.jpg'"
+    alt='{{title}}'
+    -width='375'
+    height='478'
+  />
+</div>
+<div class='modal-film__film-content'>
+  <h1 class='modal-film__film-name'>{{title}}</h1>
+  <div class="modal-film__film-data-block">
+    <div class='modal-film__film-data-statick-block'>
+        <ul class='modal-film__film-data-list'>
+          <li class='modal-film__film-data-elem'>
+            <p class='modal-film__film-data'>Vote / Votes</p>
+          </li>
+          <li class='modal-film__film-data-elem'>
+            <p class='modal-film__film-data'>Popularity </p>
+           
+          </li>
+          <li class='modal-film__film-data-elem'>
+            <p class='modal-film__film-data'>Original Title </p>
+            
+          </li>
+          <li class='modal-film__film-data-elem'>
+            <p class='modal-film__film-data'>Genre</p>
+
+          </li>
+        </ul>
+    </div>
+    <div class="modal-film__film-data-generate-block">
+      <ul class='modal-film__film-data-generate-list'>
+        <li class='modal-film__film-data-generate-elem'>
+          <p><span class="modal-film__generat-data accient"> {{vote_average}}</span> / <span class="modal-film__generat-data accient"> {{vote_count}} </span></p>
+        </li>
+        <li class='modal-film__film-data-generate-elem'>
+          <p><span class="modal-film__generat-data accient"> {{popularity}}</span></p>
+        </li>
+        <li class='modal-film__film-data-generate-elem'>
+          <p><span class="modal-film__generat-data"> {{original_title}}</span></p>
+        </li>
+        <li class='modal-film__film-data-generate-elem'>
+          <p><span class="modal-film__generat-data"> {{#if genres}}{{#each genres}}
+        {{name}}{{#unless @last}},{{/unless}}
+      {{~/each}}{{else}}<span>No genres</span>
+          {{/if}}</span></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='modal-film__about-film'>
+    <h2 class='modal-film__about'>ABOUT</h2>
+    <p class='modal-film__about-text'>
+      {{#if overview}}{{overview}}{{else}}<span>We don't have information for this movie.</span>{{/if}}
+    </p>
+  </div>
+ <div class="modal-film__btn-grup">
+              <button class="modal-film__btn" type="button" id="watched">
+                ADD TO WATCHED
+              </button>
+              <button class="modal-film__btn" type="button" id="queue">
+                ADD TO QUEUE
+              </button>
+            </div>
+</div>

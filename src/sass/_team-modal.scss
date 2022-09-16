@@ -1,0 +1,225 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.team-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding-top: 48px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+
+  height: 95%;
+  width: 280px;
+
+  background-image: linear-gradient(
+      rgba(200, 200, 200, 0.3),
+      rgba(200, 200, 200, 0.3)
+    ),
+    url(../images/cinema-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border: 10px solid var(--secondary-text-color);
+
+  animation-name: rotate;
+  animation-duration: 2500ms;
+
+  overflow-y: auto;
+
+  @include tablet {
+    height: 552px;
+    width: 704px;
+    padding: 20px;
+    overflow-y: initial;
+  }
+
+  @include desktop {
+    height: 558px;
+    width: 806px;
+    padding: 20px;
+    padding-top: 5px;
+  }
+}
+
+.btn-team-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+.btn-team-modal-close__svg {
+  width: 14px;
+  height: 14px;
+}
+
+.team-modal__text {
+  text-align: center;
+  font-size: 20px;
+  color: var(--secondary-text-color);
+}
+
+.team-header {
+  text-align: center;
+  font-size: 35px;
+  color: var(--orange-text-color);
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
+
+  @include desktop {
+    margin-bottom: 8px;
+  }
+}
+
+.team-modal-leader__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    justify-content: center;
+  }
+}
+
+.team-modal-leader__item {
+  width: 220px;
+  margin-bottom: 40px;
+
+  @include tablet {
+    width: 110px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-left: 22px;
+    }
+  }
+
+  @include desktop {
+    width: 120px;
+    margin-bottom: 8px;
+  }
+}
+
+.team-modal-leader__img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @include tablet {
+    height: 110px;
+  }
+
+  @include desktop {
+    height: 120px;
+  }
+}
+
+.team-modal-leader__name {
+  font-size: 16px;
+  color: var(--orange-text-color);
+  text-align: center;
+  margin-top: 5px;
+
+  @include tablet {
+    font-size: 10px;
+    margin-top: 3px;
+  }
+}
+
+.team-modal-leader__text {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+  color: var(--secondary-text-color);
+
+  @include tablet {
+    font-size: 8px;
+    margin-top: 3px;
+  }
+}
+
+.team-modal-dev__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    justify-content: center;
+  }
+}
+
+.team-modal-dev__item {
+  width: 220px;
+  margin-bottom: 40px;
+  @include tablet {
+    width: 110px;
+    margin-bottom: 10px;
+    margin-right: 18px;
+  }
+
+  @include desktop {
+    width: 120px;
+    margin-right: 22px;
+    margin-bottom: 8px;
+  }
+}
+
+.team-modal-dev__img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @include tablet {
+    height: 110px;
+  }
+
+  @include desktop {
+    height: 120px;
+  }
+}
+
+.team-modal-dev__name {
+  font-size: 16px;
+  color: var(--orange-text-color);
+  text-align: center;
+  margin-top: 5px;
+
+  @include tablet {
+    font-size: 10px;
+    margin-top: 3px;
+  }
+}
+
+.team-modal-dev__text {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+  color: var(--secondary-text-color);
+
+  @include tablet {
+    font-size: 8px;
+    margin-top: 3px;
+  }
+}

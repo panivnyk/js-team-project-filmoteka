@@ -15,7 +15,7 @@
       sizes="16x16"
       href="./images/favicon/movies16.png"
     />
-    <title>Filmoteka</title>
+    <title>Filmoteka-My-Library</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,12 +23,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-    <script src="./js/jquery-3.6.1.min.js"></script>
-    <script src="./js/paginationLibrary.js"></script>
+    <script type="module" src="./library.js"></script>
   </head>
   <body>
-    <header class="header" id="top">
+    <header class="header__library">
       <div class="container">
         <nav class="nav__menu">
           <a class="logo__link" href="./index.html">
@@ -42,50 +40,33 @@
             <span class="logo__link-text">Filmoteka </span>
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link current" href="./index.html">home</a>
+                <a class="nav__link" href="./index.html">home</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="./library.html">my library</a>
+                <a class="nav__link current" href="./library.html"
+                  >my library</a
+                >
               </li>
             </ul>
           </a>
         </nav>
-        <form class="search-form" id="search-form">
-          <input
-            class="input"
-            type="text"
-            name="searchQuery"
-            autocomplete="off"
-            placeholder="Movie search"
-          />
-          <button type="submit" class="submit-btn">
-            <img
-              class="btn-img"
-              src="./images/search.svg"
-              alt="search"
-              width="12"
-              height="12"
-            />
-          </button>
-          <p id="searchErrorNotif" class="searchErrorNotif"></p>
-        </form>
+        <ul class="filter__list">
+          <li class="filter__item">
+            <button class="filter_btn current watched_btn" type="button">
+              watched
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter_btn queue_btn" type="button">queue</button>
+          </li>
+        </ul>
       </div>
     </header>
     <div class="wrapper">
       <main>
-        <button type="button" class="scroll-up__btn is-hidden">
-          <img
-            src="./images/up-arrow.svg"
-            alt="arrow up"
-            class="scroll-up__img"
-            width="30"
-            height="30"
-          />
-        </button>
-        <div class="container movies__container">
+        <div class="container">
           <ul class="film__list" data-modal-open></ul>
         </div>
-        <div id="pagination-container"></div>
       </main>
       <footer class="footer">
         <div class="container">
@@ -99,7 +80,7 @@
         </div>
       </footer>
     </div>
-    <!-- -->
+
     <div class="backdrop is-hidden" data-team-modal data-team-modal-close>
       <div class="team-modal">
         <button

@@ -1,0 +1,130 @@
+.header {
+  background-image: url(../images/mobile-header-bg.png);
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  height: 230px;
+  background-size: 100% 230px;
+  @include tablet {
+    background-image: url(../images/tablet-header-bg.png);
+    height: 216px;
+    background-size: 100% 216px;
+  }
+  @include desktop {
+    background-image: url(../images/desktop-header-bg.png);
+  }
+}
+
+.container {
+  width: 280px;
+  margin: auto;
+  @include tablet {
+    width: 704px;
+  }
+  @include desktop {
+    width: 1216px;
+  }
+}
+
+.nav__menu {
+  display: flex;
+}
+
+.logo__link {
+  margin-right: auto;
+  display: flex;
+}
+
+.logo__img {
+  width: 24px;
+  height: 24px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.logo__link-text {
+  display: none;
+  font-size: 30px;
+  color: var(--secondary-text-color);
+  margin-left: 8px;
+  @include tablet {
+    display: inline;
+  }
+  @include desktop {
+    margin-left: 10px;
+  }
+}
+
+.nav__list {
+  display: flex;
+  margin-top: 4px;
+}
+
+.nav__item {
+  margin-top: 9px;
+  &:last-child {
+    margin-left: 40px;
+  }
+}
+
+.nav__link {
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+}
+
+.nav__link.current {
+  border-bottom: 3px solid #ff001b;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.5 solid #fff;
+  padding-bottom: 4px;
+  color: var(--secondary-text-color);
+  font-weight: var(--secondary-font-weight);
+  font-size: 14px;
+  width: 100%;
+  line-height: 1.14;
+  margin-bottom: 20px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--secondary-text-color);
+  font-weight: var(--secondary-font-weight);
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.search-form {
+  position: relative;
+  margin-top: 54px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    margin-top: 40px;
+    width: 336px;
+  }
+}
+
+.submit-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.searchErrorNotif {
+  color: var(--searching-error-notif-color);
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
